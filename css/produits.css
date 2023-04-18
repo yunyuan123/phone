@@ -8,13 +8,15 @@ h2{
     justify-content: center;
 }
 
-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
 }
 
-produit{
+#produit{
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
 }
