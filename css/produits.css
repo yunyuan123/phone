@@ -3,6 +3,20 @@ body,html{
     height: 100%;
 }
 
+#ban{
+    width: 100%;
+}
+
+
+
+#slide>ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+
+}
+
 h2{
     display: flex;
     justify-content: center;
@@ -19,4 +33,11 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.menu{
+    background-color: cadetblue;
+    color: black;
+    cursor: pointer;
+    position: relative;
 }
