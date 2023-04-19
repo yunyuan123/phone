@@ -1,0 +1,21 @@
+body,html{
+    margin: 0;
+    height: 100%;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr 1fr;
+    height: inherit;
+}
+
+#image{
+    grid-area: 2/1/3/2;
+}
+
+#texte{
+    grid-area: 2/2/3/3;
+    margin-top: 50px;
+
+}
