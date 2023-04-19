@@ -26,6 +26,30 @@ ul {
 a {
     text-decoration: none;
 }
+.menu{
+    background-color: rgb(139, 146, 139);
+    color:white;
+    width: fit-content;
+    text-align: center;
+    
+}
+.MK{
+    border: 1px solid black;
+}
+
+.menu>.contenu{
+    display: none;
+}
+ .menu:hover>.contenu {
+    display: block;
+    
+ }
+
+
+ .MK:hover {
+    background-color: aquamarine;
+}
+
 
 .cards {
     align-content: center;
@@ -81,3 +105,5 @@ footer {
     /* display: flex; */
 }
 
+
+/*Exemple*/
