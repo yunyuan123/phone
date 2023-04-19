@@ -1,0 +1,125 @@
+header {
+    height:10%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.logo-menu {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.logo-menu > div {
+    font-weight: 700;
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav li a {
+    color: #1d1d1d;
+}
+nav {
+   display: flex;
+   flex-direction: row;
+   font-size: 1.2em;
+   margin-top: 50px;
+}
+
+header:hover{
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-grow: 1;
+    padding-right:15px;
+    padding-top: 10px;
+}
+
+nav ul li a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.menu{
+    /* background-color: rgb(139, 146, 139); */
+    color:white;
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    
+}
+.MK{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.menu>.contenu{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    justify-content: center;
+}
+ .menu:hover>.contenu {
+    display: block;
+    
+ }
+
+ .MK:hover {
+    background-color: lightslategray;
+}
+
+
+.close-menu, .burger {
+    display: none;
+}
+
+@media screen and (max-width: 748px) {
+    nav ul {
+        flex-direction: column;  
+    }
+
+    nav {
+        position: fixed;
+        z-index: 999;
+        width: 50%;
+        height: 100%;
+        background: white;
+        transform: translateX(-100%);
+        transition: transform ease-in-out 500ms;
+        margin-top: 0;
+    }
+    
+    body:has(.burger:focus) nav {
+        transform: translateX(0);
+    }
+    body:has(.burger:focus) .burger {
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+    body:has(.burger:focus) .close-menu {
+        display: block;
+
+    }
+
+    .close-menu, .burger {
+        position: absolute;
+        top: 10px;  
+    }
+}
+
