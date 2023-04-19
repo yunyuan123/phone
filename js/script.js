@@ -37,3 +37,7 @@ function show(n,a){
     }
 
 }
+
+setInterval(() => {
+    next(document.querySelector('.new'),1)
+}, 4000)
