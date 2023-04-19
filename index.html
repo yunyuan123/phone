@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="fa/js/all.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
     <header>
+        <div class="logo-menu">
+            <div class="logo">PHONESITE</div>
+            <a href="#" class="burger"><i class="fa-solid fa-xl fa-bars"></i></a>
+            <a href="#" class="close-menu"><i class="fa-solid fa-xl fa-xmark"></i></a>
+        </div>
         <nav>
-            <img id="logo" src="img/4171340_camera_day_love_movie_valentine_icon.png" alt="logo" width="5%" height="20%">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="About.html">About</a></li>
@@ -49,8 +56,8 @@
                 <img src="img/moto--3.png" alt="" height="500px" width="100%">
                 <figcaption></figcaption>
             </figure>
-            <a class="suiv" onclick="next(this,1)">></a>
-            <a class="prece" onclick="next(this,-1)"><</a>
+            <a class="suiv" onclick="next(this,1)"><i class="fa-solid fa-xl fa-circle-chevron-right"></i></a>
+            <a class="prece" onclick="next(this,-1)"><i class="fa-solid fa-xl fa-circle-chevron-left"></i></a>
             </div>
             <div style="text-align:center">
                 <span class="dot active" onclick="current(this,1)"></span>
@@ -61,29 +68,21 @@
             </article>
         
         <section id="marque">
-            <div>
-                <a href="xiaomi.html">
-                    <img class="AA" src="img/xiaomi-logo-png-xiaomi-mi-logo-850-fi15408126x480.png">
-                </a>
-            </div>
-            <div>
-                <a href="motorola.html">
-                   <img class="AA" src="img/Motorola-logo-black-and-white.png">
-                </a>
-            </div>
-            <div>
-                <a href="apple.html">
-                   <img class="AA" src="img/png-clipart-apple-logo-business-apple-logo-outline-heart-logo_resultat_resultat.png">
-                </a>
-            </div>
-            <div>
-                <a href="samsung.html">
-                   <img class="AA" src="img/Samsung-Logo_resultat.png">
-                </a>
-            </div>
+            <a href="xiaomi.html">
+                <img class="AA xiaomi" src="img/xiaomi-logo-png-xiaomi-mi-logo-850-fi15408126x480.png">
+            </a>
+            <a href="motorola.html">
+                <img class="AA" src="img/Motorola-logo-black-and-white.png">
+            </a>
+            <a href="apple.html">
+                <img class="AA" src="img/png-clipart-apple-logo-business-apple-logo-outline-heart-logo_resultat_resultat.png">
+            </a>
+            <a href="samsung.html">
+                <img class="AA" src="img/Samsung-Logo_resultat.png">
+            </a>
         </section>
-        <h4>Nouuveautés</h4>
-        <div id="container">
+        <h2>Nouveautés</h2>
+        <div class="new-phones">
              <figure>
                <a href="">
                 <img src="img/iPhone_14_Pro.png" height="200px" width="100%" >
@@ -99,11 +98,11 @@
                 <img src="img/samsung.png" height="200px" width="100%">
              </figure>
         </div>
-        <h4><a href="#">About us</a></h4>
-            <pre>
+        <h2><a href="#">About us</a></h2>
+            <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.  laboriosam, laborum fugit mollitia dicta!
-            </pre>
-        <h4>Contactez-Nous</h4>
+            </p>
+        <h2>Contactez-Nous</h2>
             <section class="carte">
                 <div>
                     <img src="img/thumbnail.jpg" class="google" alt="map">

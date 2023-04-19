@@ -1,18 +1,43 @@
+@import url('./reset.css');
+
 body,html {
     margin: 0;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
     height:10%;
     width: 100%;
-    background-color: darkgray;
-    text-justify: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.logo-menu {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.logo-menu > div {
+    font-weight: 700;
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav li a {
+    color: #1d1d1d;
 }
 nav {
    display: flex;
    flex-direction: row;
-   font-size: 1.5em;
+   font-size: 1.2em;
+   margin-top: 50px;
 }
 
 header:hover{
@@ -21,12 +46,6 @@ header:hover{
 
 /* //////////////CARROUSEL//////////// */
 
-body,html{
-    height: 100%;
-    margin: 0;
-}
-/*
-*/
 div.new{
     position: relative;
     width: fit-content;
@@ -96,20 +115,25 @@ align-items: center;
 /* /////////FIN DE CARROUSSEL////////// */
 
 
-ul {
+nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     flex-grow: 1;
     padding-right:15px;
     padding-top: 10px;
 }
 
+nav ul li a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 a {
     text-decoration: none;
 }
 .menu{
-    background-color: rgb(139, 146, 139);
+    /* background-color: rgb(139, 146, 139); */
     color:white;
     width: fit-content;
     text-align: center;
@@ -147,27 +171,34 @@ a {
     display: flex;
     flex-direction: row;   
     justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .AA {
-    height: 154px;
     width: 154px;
     border-radius: 20px;
     justify-content: space-around;
     text-align: center;
 }
+.AA.xiaomi {
+    width:78px;
+}
 
 
-#container {
+.new-phones {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 10px;
     object-fit: cover;
 }
-h4 {
+h2 {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 1.5em;
 }
 
 .carte {
@@ -259,3 +290,57 @@ footer {
 img {
     border-radius: 8%;
 }
+
+.close-menu, .burger {
+    display: none;
+}
+
+
+@media screen and (max-width: 748px) {
+    nav ul {
+        flex-direction: column;  
+    }
+
+    .carte {
+        flex-direction: column;
+    }
+
+    #marque, .new-phones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    nav {
+        position: fixed;
+        z-index: 999;
+        width: 50%;
+        height: 100%;
+        background: white;
+        transform: translateX(-100%);
+        transition: transform ease-in-out 500ms;
+    }
+    
+    body:has(.burger:focus) nav {
+        transform: translateX(0);
+    }
+    body:has(.burger:focus) .burger {
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+    body:has(.burger:focus) .close-menu {
+        display: block;
+
+    }
+
+    .close-menu, .burger {
+        position: absolute;
+        top: 10px;  
+    }
+}
+
