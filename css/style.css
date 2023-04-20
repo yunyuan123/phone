@@ -19,3 +19,13 @@ body,html{
     margin-top: 50px;
 
 }
+
+#panier{
+    background-color: red;
+    border-radius: 10%;
+
+}
+
+p{
+    font-size: larger;
+}
