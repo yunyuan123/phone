@@ -8,7 +8,6 @@ body,html{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 1fr 1fr 1fr;
-    height: inherit;
 }
 
 #image{
@@ -188,7 +187,6 @@ footer {
 #name{margin-right: 50px;
 }
 
-/*Exemple*/
 #grille{
     display: grid;
     grid-template-columns: repeat(2,1fr);
