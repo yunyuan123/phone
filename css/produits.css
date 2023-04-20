@@ -26,6 +26,7 @@ h2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    margin-top: 150px;
 
 }
 
@@ -35,9 +36,29 @@ h2{
     align-items: center;
 }
 
+/* //////////////MENU DEROULANT//////////// */
+
 .menu{
-    background-color: cadetblue;
+    background-color: transparent;
     color: black;
     cursor: pointer;
     position: relative;
+}
+
+.menu>.contenu{
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+
+.mk{
+    border: 1px solid transparent;
+}   
+
+.menu:hover>.contenu{
+    display: block;
+}
+
+.mk:hover{
+    background-color: transparent;
 }
