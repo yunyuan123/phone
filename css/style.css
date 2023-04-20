@@ -217,4 +217,7 @@ img {
         grid-template-columns: 1fr 1fr;
         text-align: center;
     }
+    .map {
+        padding-left: 30%;
+    }
 }
